@@ -1,0 +1,22 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/kabligh/Makers/bookmark_manager/spec/bookmark_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/kabligh/Makers/bookmark_manager/spec/features/bookmark_erb_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1605541900
+  }
+}

@@ -9,4 +9,7 @@ gem 'sinatra'
 group :test do
   gem 'capybara'
   gem 'rspec'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+  gem 'rubocop', '0.79.0'
 end
