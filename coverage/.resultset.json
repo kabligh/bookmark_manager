@@ -3,11 +3,43 @@
     "coverage": {
       "/Users/kabligh/Makers/bookmark_manager/spec/bookmark_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
         ]
       },
-      "/Users/kabligh/Makers/bookmark_manager/spec/features/bookmark_erb_spec.rb": {
+      "/Users/kabligh/Makers/bookmark_manager/lib/bookmark.rb": {
         "lines": [
+          1,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kabligh/Makers/bookmark_manager/spec/features/viewing_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -17,6 +49,6 @@
         ]
       }
     },
-    "timestamp": 1605541900
+    "timestamp": 1605546907
   }
 }

@@ -3,7 +3,12 @@ require 'sinatra/base'
 class BookmarkManager < Sinatra::Base
 
   get '/' do
-    "Testing infrastructure working!"
+    "Bookmark Manager"
+  end
+
+  get '/bookmarks' do
+    @bookmarks = Bookmark.all
+    erb(:'bookmarks/index')
   end
 
   # start the server if ruby file executed directly
