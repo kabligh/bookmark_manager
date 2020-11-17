@@ -1,13 +1,20 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kabligh/Makers/bookmark_manager/spec/bookmark_spec.rb": {
+      "/Users/kabligh/Makers/week4/bookmark_manager/spec/bookmark_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           null,
           1,
@@ -18,21 +25,10 @@
           null
         ]
       },
-      "/Users/kabligh/Makers/bookmark_manager/lib/bookmark.rb": {
+      "/Users/kabligh/Makers/week4/bookmark_manager/spec/features/viewing_bookmark_spec.rb": {
         "lines": [
           1,
-          1,
           null,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kabligh/Makers/bookmark_manager/spec/features/viewing_bookmark_spec.rb": {
-        "lines": [
           1,
           1,
           1,
@@ -40,6 +36,13 @@
           null,
           null,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           1,
@@ -49,6 +52,6 @@
         ]
       }
     },
-    "timestamp": 1605546907
+    "timestamp": 1605625403
   }
 }
