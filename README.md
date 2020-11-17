@@ -14,3 +14,16 @@ Week 4 of Makers Academy afternoon challenge: building a bookmark manager.
 Run `rackup -p 3000`
 
 To view bookmarks, navigate to `localhost:3000/bookmarks`.
+
+### User story 1
+```
+As a user,
+So I can see my saved bookmarks,
+I'd like to be able to pull up a list of saved bookmarks
+```
+### User story 2
+```
+As a user,
+So I can save a website,
+I'd like to add the website's address to my bookmark manager
+```
