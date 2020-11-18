@@ -27,3 +27,9 @@ As a user,
 So I can save a website,
 I'd like to add the website's address to my bookmark manager
 ```
+### User story 3
+```
+As a user,
+So I can remove websites I don't like,
+I'd like to be able to delete websites from my bookmark manager
+```
