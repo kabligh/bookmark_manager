@@ -33,3 +33,9 @@ As a user,
 So I can remove websites I don't like,
 I'd like to be able to delete websites from my bookmark manager
 ```
+### User story 4
+```
+As a user,
+So I can edit my bookmark manager
+I'd like to be able to update my bookmarks
+```

@@ -9,13 +9,13 @@ describe Bookmark do
       # Add the test data
       Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
       Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
-      bookmark = Bookmark.create(url: "http://www.google.com", title: "Google")
+      google = Bookmark.create(url: "http://www.google.com", title: "Google")
 
       bookmarks = Bookmark.all
 
       expect(bookmarks.length).to eq 3
       expect(bookmarks.first).to be_a Bookmark
-      expect(bookmarks.last.id).to eq bookmark.id
+      expect(bookmarks.last.id).to eq google.id
       expect(bookmarks.first.title).to eq "Makers Academy"
       expect(bookmarks.first.url).to eq "http://www.makersacademy.com"
     end
@@ -40,6 +40,30 @@ describe Bookmark do
       Bookmark.delete(id: bookmark.id)
 
       expect(Bookmark.all.length).to eq 0
+    end
+  end
+
+  describe ".update" do
+    it "updates a bookmark" do
+      bookmark = Bookmark.create(title: "Modern House", url: "https://www.themodernhouse.com/")
+
+      Bookmark.update(id: bookmark.id, url: "https://www.theoldhouse.com", title: "Old House")
+
+      expect(Bookmark.all.last.title).to eq "Old House"
+      expect(Bookmark.all.last.url).to eq "https://www.theoldhouse.com"
+    end
+  end
+
+  describe ".find" do
+    it "returns the requested bookmark object" do
+      bookmark = Bookmark.create(title: "Modern House", url: "https://www.themodernhouse.com/")
+
+      result = Bookmark.find(id: bookmark.id)
+
+      expect(result).to be_a Bookmark
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq "Modern House"
+      expect(result.url).to eq "https://www.themodernhouse.com/"
     end
   end
 end

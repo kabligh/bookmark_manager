@@ -3,7 +3,8 @@ require 'pg'
 feature "Viewing bookmarks" do
   scenario "homepage has bookmark manager" do
     visit('/')
-    expect(page).to have_content "Bookmark Manager"
+    expect(page).to have_content("Bookmark Manager")
+    expect(page).to have_link("Bookmarks", href: '/bookmarks')
   end
 
   scenario "User can see list of bookmarks" do
