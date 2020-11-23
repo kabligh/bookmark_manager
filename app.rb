@@ -6,8 +6,15 @@ class BookmarkManager < Sinatra::Base
 
   enable :sessions, :method_override
 
+  configure do
+    # allows sinatra to find my CSS stylesheet
+    set :public_folder, File.expand_path('../public', __FILE__)
+    set :views        , File.expand_path('../views', __FILE__)
+    set :root         , File.dirname(__FILE__)
+  end
+
   get '/' do
-    erb(:index)
+    erb(:home)
   end
 
   get '/bookmarks' do
@@ -25,8 +32,8 @@ class BookmarkManager < Sinatra::Base
     redirect('/bookmarks')
   end
 
-  get '/bookmarks/new' do
-    erb(:'bookmarks/new')
+  get '/bookmarks' do
+    erb(:'bookmarks')
   end
 
   get "/bookmarks/:id/edit" do
