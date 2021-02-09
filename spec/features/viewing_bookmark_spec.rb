@@ -1,8 +1,8 @@
 feature "Viewing bookmarks" do
   scenario "homepage has bookmark manager" do
     visit('/')
-    expect(page).to have_content("Bookmark Manager")
-    expect(page).to have_link("Bookmarks", href: '/bookmarks')
+    expect(page).to have_content("BOOKMARK MANAGER")
+    expect(page).to have_link("VIEW BOOKMARKS", href: '/bookmarks')
   end
 
   scenario "User can see list of bookmarks" do

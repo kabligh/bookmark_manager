@@ -15,27 +15,25 @@ Run `rackup -p 3000`
 
 To view bookmarks, navigate to `localhost:3000/bookmarks`.
 
-### User story 1
+### User stories:
 ```
 As a user,
 So I can see my saved bookmarks,
 I'd like to be able to pull up a list of saved bookmarks
-```
-### User story 2
-```
+
 As a user,
 So I can save a website,
 I'd like to add the website's address to my bookmark manager
-```
-### User story 3
-```
+
 As a user,
 So I can remove websites I don't like,
 I'd like to be able to delete websites from my bookmark manager
-```
-### User story 4
-```
+
 As a user,
-So I can edit my bookmark manager
+So I can edit my bookmark manager,
 I'd like to be able to update my bookmarks
+
+As a user,
+So the bookmarks I save are useful,
+I'd like to only save valie URLs
 ```

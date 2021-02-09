@@ -4,7 +4,7 @@ feature "Updating bookmarks" do
     visit('/bookmarks')
     expect(page).to have_link("Modern House", href: "https://www.themodernhouse.com/")
 
-    expect(page).to have_button('Edit')
+    expect(page).to have_button('EDIT')
   end
 
   scenario "User can edit specific bookmark" do
@@ -12,11 +12,12 @@ feature "Updating bookmarks" do
     visit('/bookmarks')
     expect(page).to have_link("Modern House", href: "https://www.themodernhouse.com/")
 
-    first('.bookmark').click_button('Edit')
+    first('.bookmark').click_button('EDIT')
     expect(current_path).to eq "/bookmarks/#{bookmark.id}/edit"
+    
     fill_in('url', with: "https://theoldhouse.com/")
     fill_in('title', with: "Old House")
-    click_button('Submit')
+    click_button('SUBMIT')
     expect(page).to have_link("Old House", href: "https://theoldhouse.com/")
   end
 end

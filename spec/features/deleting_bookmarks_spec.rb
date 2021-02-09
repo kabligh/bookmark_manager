@@ -4,7 +4,7 @@ feature "Deleting bookmarks" do
     visit('/bookmarks')
     expect(page).to have_link("Modern House", href: "https://www.themodernhouse.com/")
 
-    first('.bookmark').click_button('Delete')
+    first('.bookmark').click_button('DELETE')
 
     expect(current_path).to eq '/bookmarks'
     expect(page).not_to have_link("Modern House", href: "https://www.themodernhouse.com/")
