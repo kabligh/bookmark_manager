@@ -29,6 +29,11 @@ describe Bookmark do
       expect(bookmark.url).to eq "http://twitter.com"
       expect(bookmark.title).to eq "Twitter"
     end
+
+    it "does not let an invalid bookmark be created" do 
+      Bookmark.create(url: "Not a bookmark", title: "Oops")
+      expect(Bookmark.all).to be_empty
+    end 
   end
 
   describe ".delete" do
