@@ -35,5 +35,13 @@ I'd like to be able to update my bookmarks
 
 As a user,
 So the bookmarks I save are useful,
-I'd like to only save valie URLs
+I'd like to only save valid URLs
+
+As a user,
+So I can keep notes about my bookmarks,
+I want to add comments to them
+
+As a user,
+So that I can categorize my Bookmarks,
+I want to add tags to them
 ```
