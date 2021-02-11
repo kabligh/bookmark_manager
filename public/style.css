@@ -4,7 +4,7 @@ body {
   margin: 100px;
 }
 
-input[type=submit] {
+button {
   background-color: #95A5A6;
   border-radius: 4px;
   color: white;

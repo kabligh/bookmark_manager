@@ -8,7 +8,7 @@
       <form action="/bookmarks" method="post">
           <input type="text" name="url" placeholder="URL" />
           <input type="text" name="title" placeholder="Title" />
-          <input type="submit" value="ADD" />
+          <button type="submit">ADD</button>
       </form>
       <p>
         <%= flash[:notice] %>
@@ -21,17 +21,17 @@
               <h2><%= bookmark.title %></h2>
             </a>
             <form action="/bookmarks/<%=bookmark.id%>/comments/new" method="get">
-              <input type="submit" value="ADD COMMENT"/>
+              <button type="submit">ADD COMMENT</button>
             </form>
             <form action="/bookmarks/<%=bookmark.id%>/tags/new" method="get">
-              <input type="submit" value="ADD TAG"/>
+              <button type="submit">ADD TAG</button>
             </form>
             <form action="/bookmarks/<%=bookmark.id%>/edit">
-              <input type="submit" value="EDIT"/>
+              <button type="submit">EDIT</button>
             </form>
             <form action="/bookmarks/<%= bookmark.id %>" method="post">
               <input type="hidden" name="_method" value="DELETE"/>
-              <input type="submit" value="DELETE" />
+              <button type="submit">DELETE</button>
             </form>
             <div>
               <h3>Comments:</h3>
