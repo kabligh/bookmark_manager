@@ -1,0 +1,1 @@
+ALTER TABLE bookmarks_tags ADD FOREIGN KEY (bookmark_id) REFERENCES bookmarks(id);

@@ -27,6 +27,7 @@ class Bookmark
   end
 
   def self.delete(id:)
+    DatabaseConnection.query("DELETE FROM bookmarks_tags WHERE bookmark_id = #{id};")
     DatabaseConnection.query("DELETE FROM bookmarks WHERE id = #{id};")
   end
 

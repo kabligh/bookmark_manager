@@ -9,16 +9,11 @@ input[type=submit] {
   border-radius: 4px;
   color: white;
   font-family: monospace;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 5px;
   cursor: pointer;
+  display: inline-block;
 }
 
-ul {
-  padding: 20px;
-  margin: 50px 50px 50px 50px;
-}
-
-li {
-  margin: 50px 50px 50px 50px;
-}
+/* p {
+  color: red;
+} */
