@@ -1,0 +1,17 @@
+<html>
+ <head>
+   <link rel="stylesheet" href="/style.css">
+  </head>
+<body>
+<h2>Tag: <%=@tag.content%></h2>
+  <ul>
+    <% @tag.bookmarks.each do |bookmark| %>
+      <li>
+        <a href="<%= bookmark.url %>" target="_blank">
+          <%= bookmark.title %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<h3><a href="/bookmarks">👈 Return to bookmarks</a></h3>
+</body>

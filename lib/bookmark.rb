@@ -6,18 +6,9 @@ require_relative 'tag'
 
 class Bookmark
 
-  attr_reader :id, :title, :url
-
-  def initialize(id:, title:, url:)
-    @id = id
-    @title = title
-    @url = url
-  end
-
   def self.all
     result = DatabaseConnection.query("SELECT * FROM bookmarks;")
     result.map { |bookmark| Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url']) }
-
   end
 
   def self.create(url:, title:)
@@ -40,6 +31,21 @@ class Bookmark
   def self.find(id:)
     result = DatabaseConnection.query("SELECT * FROM bookmarks WHERE id = #{id};")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+  end
+
+  def self.where(tag_id:)
+    result = DatabaseConnection.query("SELECT id, title, url FROM bookmarks_tags INNER JOIN bookmarks ON bookmarks.id = bookmarks_tags.bookmark_id WHERE bookmarks_tags.tag_id = '#{tag_id}';")
+    result.map do |bookmark|
+      Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
+    end
+  end
+
+  attr_reader :id, :title, :url
+
+  def initialize(id:, title:, url:)
+    @id = id
+    @title = title
+    @url = url
   end
 
   def comments(comment_class = Comment)

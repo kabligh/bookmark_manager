@@ -44,4 +44,8 @@ I want to add comments to them
 As a user,
 So that I can categorize my Bookmarks,
 I want to add tags to them
+
+As a user,
+So I can find relevant bookmarks, 
+I want to filter them by Tags
 ```

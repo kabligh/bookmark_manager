@@ -8,6 +8,7 @@ gem 'sinatra'
 gem 'sinatra-flash'
 gem 'pg'
 gem 'shotgun'
+gem 'solargraph'
 
 group :test do
   gem 'capybara'

@@ -41,11 +41,20 @@
                 <% end %>
               </ul>
             </div>
-            <div>
-              <h3>Tags: <%bookmark.tags.each do |tag|%>
-                  <%=tag.content%>
-                <%end%></h3>
-            </div>
+            <% if bookmark.tags.length > 0 %>
+              <div>
+                <h3>Tags:</h3> 
+                <ul>
+                  <%bookmark.tags.each do |tag|%>
+                    <li>
+                      <a href="/tags/<%=tag.id%>/bookmarks">
+                        <%=tag.content%>
+                      </a>
+                    </li>
+                  <%end%>
+                </ul>
+              </div>
+            <%end%>
           </li>
         <% end %>
       </ul>
